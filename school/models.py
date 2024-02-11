@@ -6,6 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from django.core.validators import MaxLengthValidator
 
 
 class Activity(models.Model):
@@ -51,7 +52,7 @@ class Guardian(models.Model):
     name = models.CharField(max_length=50, blank=False)
     home_address = models.CharField(db_column='homeAddress', max_length=120, blank=True)  # Field name made lowercase.
     occupation = models.CharField(max_length=30, blank=True)
-    phone_number = models.CharField(max_length=11, db_column='phoneNumber', blank=False)  # Field name made lowercase.
+    phone_number = models.CharField(max_length=11, db_column='phoneNumber', blank=False, validators=[MaxLengthValidator(limit_value=11)])  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -159,7 +160,6 @@ class Student(models.Model):
     class Meta:
         managed = False
         db_table = 'student'
-
 
 
 class Teacher(models.Model):
