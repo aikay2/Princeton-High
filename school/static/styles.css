@@ -16,7 +16,7 @@ body.dark-mode {
   }
 
 header {
-    background-color:rgb(43, 144, 226)     ;
+    background-color: black;
     color:black;
     padding: 20px;
 }
@@ -126,7 +126,7 @@ p {
 }
 
 footer {
-    background-color:lightblue;
+    background-color: black;
     color: #fff;
     padding: 10px;
     position: fixed;
