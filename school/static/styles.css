@@ -13,11 +13,11 @@ body {
 body.dark-mode {
     --background-color: #333;
     --text-color: #fff;
-  }
+}
 
 header {
     background-color: black;
-    color:black;
+    color: white;
     padding: 20px;
 }
 
@@ -82,10 +82,17 @@ section {
     padding: 20px;
     width: 50%;
     height: 600px;
-    align-items: center;
-    align-self: center;
+    /* align-items: center;
+    align-self: center; 
     margin-left: 25%;
-    margin-right: 25%;
+    margin-right: 25%; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-section {
+    justify-content: center;
 }
 
 button {
@@ -127,15 +134,26 @@ p {
 
 footer {
     background-color: black;
-    color: #fff;
+    color: white;
     padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
+#foot {
+    color: white;
+}
+
 #home {
     font-size: 40px;
+    text-align: center;
+}
+
+#h_left {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: left;
 }
 
 #left {
